@@ -1,0 +1,13 @@
+# ~EN: juniper mvc {
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ _.php?url=$1 [PT,L,QSA]
+</IfModule>
+
+#AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf image/svg+xml
+
+# } juniper mvc : EN~

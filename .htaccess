@@ -1,0 +1,86 @@
+# ~EN: juniper mvc
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/vnd.ms-fontobject font/truetype font/opentype application/x-font-woff
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+# webfont mime types
+AddType application/vnd.ms-fontobject  eot
+AddType font/truetype                  ttf
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff
+
+# webfonts and svg:
+<IfModule mod_deflate.c>
+    <FilesMatch "\.(ttf|otf|eot|svg)$" >
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+# Expires Headers - 2678400s = 31 days
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 seconds"
+    ExpiresByType text/html "access plus 7200 seconds"
+    ExpiresByType image/gif "access plus 2678400 seconds"
+    ExpiresByType image/jpeg "access plus 2678400 seconds"
+    ExpiresByType image/png "access plus 2678400 seconds"
+    ExpiresByType text/css "access plus 518400 seconds"
+    ExpiresByType text/javascript "access plus 2678400 seconds"
+    ExpiresByType application/x-javascript "access plus 2678400 seconds"
+</IfModule>
+
+# Cache Headers
+<IfModule mod_headers.c>
+    # Cache specified files for 31 days
+    <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+        Header set Cache-Control "max-age=2678400, public"
+    </filesmatch>
+    # Cache HTML files for a couple hours
+    <filesmatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, private, must-revalidate"
+    </filesmatch>
+    # Cache PDFs for a day
+    <filesmatch "\.(pdf)$">
+        Header set Cache-Control "max-age=86400, public"
+    </filesmatch>
+    # Cache Javascripts for 31 days
+    <filesmatch "\.(js)$">
+        Header set Cache-Control "max-age=2678400, private"
+    </filesmatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    
+    # ~EN (2015): opt - try to minimise time to produce local files
+    RewriteRule ^design/(.+)/* _/templates/site/$1 [L,QSA]
+    RewriteRule ^fonts/(.+)/* _/templates/_/fonts/$1 [L,QSA]
+    RewriteRule ^site/(.+)/* _/sites/site/$1 [L,QSA]
+    RewriteRule ^js/opt/(.+)/* _/templates/site/js/opt/$1 [L,QSA]
+    
+    RewriteCond %{REQUEST_URI} ^(!/)$
+    RewriteCond %{DOCUMENT_ROOT}/_/sites/%{HTTP_HOST}/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/_/sites/%{HTTP_HOST}/$1 -d
+    RewriteRule ^(.*)$ /_/sites/%{HTTP_HOST}/$1 [L]
+    
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule . %{REQUEST_FILENAME}.php [L,QSA]
+    
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteRule    ^$    _/%{REQUEST_FILENAME} [L]
+    RewriteRule    (.*) /_/_.php?url=$1 [L,QSA]
+</IfModule>
+
+# } juniper mvc : EN~

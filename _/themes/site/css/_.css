@@ -1,0 +1,69 @@
+/*
+	Palette Name: Victorian
+	Thumb: #8E6986
+*/
+
+.theme--victorian{
+	background: #E5D8E2;
+}
+
+.theme--victorian #header{
+	border:solid 1px #1f3948;
+	background-color:#73A5B3;
+}
+
+.theme--victorian #header #logo.wordmark .salutation,
+.theme--victorian #header #logo.wordmark .slogan,
+.theme--victorian #header #header-contact_us #header-contact_us-phone .phone,
+.theme--victorian #header #header-contact_us #header-contact_us-phone .address{
+	color:#eee;
+	text-shadow: 0 0 .15em #666;
+}
+
+.theme--victorian .wrapper #header #header-contact_us #header-contact_us-button .bg{
+	background-image: url('../img/arrows.png');
+	_background-image: url('../img/arrows/arrows-ie6.gif');
+}
+
+
+.theme--victorian #header ._-nav--wrapper{
+	border-color:#add8f5;
+	background-color:#1f3a49;
+}
+
+.theme--victorian #header ._-nav--wrapper ._-nav{
+	border-color:#2b6e9c;
+}
+
+.theme--victorian #header #logo.wordmark .text{
+	text-shadow: 0 0 .15em #777;
+	-moz-text-stroke: 1px #2b6e9c;
+	-webkit-text-stroke: 1px #2b6e9c;
+	text-stroke:1px #2b6e9c;
+/*	color:#474346 !important;*/
+}
+
+.theme--victorian #content{
+	border-color:#261F47;
+	background-color:#8E6986;
+}
+
+.theme--victorian #footer{
+	background-color:#2B6E9C;
+}
+
+.theme--victorian #mid #sidebar ._-widget{
+	background-color:#2b6e9c;
+}
+
+.theme--victorian #mid #sidebar #sidebar--widget--news._-widget{
+	background-image: url('/widgets/news/img/_.gif');
+}
+
+.theme--victorian #mid #sidebar #sidebar--widget--photo-gallery._-widget{
+	background-image: url('/widgets/photo-gallery/img/_.gif');
+}
+
+.theme--victorian #mid #sidebar #sidebar--widget--local-attractions._-widget{
+	background-image: url('/widgets/local-attractions/img/_.gif');
+}

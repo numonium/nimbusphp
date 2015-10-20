@@ -1,0 +1,15 @@
+._-mod--stopwatch{
+	display:none;
+	position:fixed;
+	bottom:5%;
+	right:2%;
+	opacity:.85;
+}
+
+.ticker{
+	font-family:'LED';
+	font-size:56px;
+	font-weight: bold;
+	font-style: italic;
+	color:#403d36;
+}

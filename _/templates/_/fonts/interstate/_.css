@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Interstate';
+    src: url('interstate-black.eot');
+    src: url('interstate-black.eot?#iefix') format('embedded-opentype'),
+         url('interstate-black.woff') format('woff'),
+         url('interstate-black.ttf') format('truetype'),
+         url('interstate-black.svg#InterstateBlackRegular') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterstateCondensed';
+    src: url('interstate-black-cond.eot');
+    src: url('interstate-black-cond.eot?#iefix') format('embedded-opentype'),
+         url('interstate-black-cond.woff') format('woff'),
+         url('interstate-black-cond.ttf') format('truetype'),
+         url('interstate-black-cond.svg#InterstateBlackCondensedRg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}

@@ -1,0 +1,24 @@
+[04-Jan-2015 01:39:26 America/New_York] PHP Strict Standards:  Non-static method _Vacation::all() should not be called statically in /home/clients/public_html/_/sites/sfm/-/vacations.php on line 6
+[04-Jan-2015 01:39:38 America/New_York] PHP Parse error:  syntax error, unexpected 'stattic' (T_STRING), expecting variable (T_VARIABLE) in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 29
+[04-Jan-2015 13:10:04 America/New_York] PHP Notice:  Undefined index: city-name in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 41
+[04-Jan-2015 13:10:04 America/New_York] PHP Notice:  Undefined index: city-name in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 41
+[04-Jan-2015 13:10:04 America/New_York] PHP Notice:  Undefined index: city-name in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 41
+[04-Jan-2015 13:10:04 America/New_York] PHP Notice:  Undefined index: city-name in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 41
+[04-Jan-2015 13:10:04 America/New_York] PHP Notice:  Undefined index: city-name in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 41
+[12-Jan-2015 18:06:00 America/New_York] PHP Notice:  Undefined index: _ in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 59
+[12-Jan-2015 18:06:00 America/New_York] PHP Notice:  Undefined index: _ in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 59
+[12-Jan-2015 18:06:00 America/New_York] PHP Notice:  Undefined index: _ in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 59
+[12-Jan-2015 18:06:00 America/New_York] PHP Notice:  Undefined index: _ in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 59
+[12-Jan-2015 18:06:00 America/New_York] PHP Notice:  Undefined index: _ in /home/clients/public_html/_/sites/sfm/_/lib/m/vacation.m.php on line 59
+[17-Feb-2015 23:22:52 America/New_York] PHP Warning:  curl_getinfo(): 122 is not a valid cURL handle resource in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 17
+[17-Feb-2015 23:22:58 America/New_York] PHP Warning:  curl_getinfo() expects parameter 1 to be resource, boolean given in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 17
+[26-Feb-2015 15:37:54 America/New_York] PHP Notice:  Undefined variable: url in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 15
+[26-Feb-2015 15:37:54 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/clients/public_html/_/sites/sfm/-/proxy.php:15) in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 19
+[26-Feb-2015 19:27:36 America/New_York] PHP Notice:  Undefined variable: url in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 15
+[26-Feb-2015 19:27:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/clients/public_html/_/sites/sfm/-/proxy.php:15) in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 19
+[27-Feb-2015 11:14:31 America/New_York] PHP Notice:  Undefined variable: url in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 15
+[27-Feb-2015 11:14:31 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/clients/public_html/_/sites/sfm/-/proxy.php:15) in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 19
+[27-Feb-2015 12:17:07 America/New_York] PHP Notice:  Undefined variable: url in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 15
+[27-Feb-2015 12:17:07 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/clients/public_html/_/sites/sfm/-/proxy.php:15) in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 19
+[27-Feb-2015 12:29:37 America/New_York] PHP Notice:  Undefined variable: url in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 15
+[27-Feb-2015 12:29:37 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/clients/public_html/_/sites/sfm/-/proxy.php:15) in /home/clients/public_html/_/sites/sfm/-/proxy.php on line 19

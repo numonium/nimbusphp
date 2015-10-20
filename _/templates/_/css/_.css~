@@ -1,0 +1,373 @@
+/* ~EN: global/common css file */
+*{ outline: none !important; }
+
+html, body{ margin:0; padding:0; }
+
+body{
+	overflow-x:hidden !important;
+	padding-bottom:8%;
+	font-family:'gill sans mt','gill sans','segoe ui',segoe,'century gothic','URW Gothic L','trebuchet ms',trebuchet,arial,sans-serif;
+	background: #eff3e1;
+	color:#222;
+}
+
+input, select, textarea{
+	font-family:'gill sans mt','gill sans','segoe ui',segoe,'century gothic','URW Gothic L','trebuchet ms',trebuchet,arial,sans-serif;
+}
+
+::-webkit-input-placeholder{
+	color: #aaa !important;
+}
+
+*:-moz-placeholder{
+	color: #aaa !important;
+}
+
+*:-ms-input-placeholder {
+	color: #aaa !important;
+}
+
+._-align--left{
+	text-align: left !important;
+}
+
+._-align--center{
+	text-align: center !important;
+}
+
+._-align--right{
+	text-align: right !important;
+}
+
+._-align--justify,
+._-align-justified{
+	text-align: justify !important;
+}
+
+._-arrow,
+._-arrow--up,
+._-arrow--down{
+	position: relative;
+	font-size: 0px;
+	line-height: 0%;
+	width: 0px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+._-arrow--up{
+	border-bottom: 10px solid #f5ffd3;		
+}
+
+._-arrow,
+._-arrow--down{
+	border-top: solid 10px #F5FFD3;
+}
+
+._-arrow--left{
+	font-size: 0px;
+	line-height: 0%;
+	width: 0px;
+	border-top: 5px solid transparent;
+	border-right: 10px solid #53c0ff;
+	border-bottom: 5px solid transparent;
+}
+
+table._-listing{
+	display:block;
+	width:95%;
+	margin:1em auto;
+}
+
+table._-listing th,
+table._-listing td{
+	padding:.25em;
+}
+
+table._-listing th{
+	font-family: CENTURY-GOTHIC;
+}
+/*
+._-ui--colorpicker{
+	display:block;
+	position:relative;
+	width:85%;
+	height:55%;
+	margin:0 auto;
+	border:solid 1px #999;
+	background: #ccc;
+	border-radius: 3px;
+}
+
+._-ui--colorpicker ._-ui--colorpicker--palette{
+	display:none;
+	position: absolute;
+	top:-600%;
+	left:-100%;
+	width:300%;
+	margin:0;
+	padding:0;
+	list-style: none;
+	border:solid 1px #999;
+	background:#eaeaea;
+}
+
+._-ui--colorpicker ._-ui--colorpicker--palette li{
+	display:inline-block;
+	width:20%;
+	height:20px;
+	margin:1%;
+}
+
+._-ui--colorpicker ._-ui--colorpicker--selection{
+	position:absolute;
+	top:8%;
+	right:10%;
+	bottom:10%;
+	left:10%;
+	border-radius:3px;
+}
+
+._-input--select._-th,
+._-input--text._-th,
+._-input--textarea._-th{
+	font:inherit !important;
+}
+
+._-modal{
+	overflow:hidden;
+	position:fixed;
+	top:3%;
+	right:25%;
+	bottom:11%;
+	left:25%;
+	padding:2%;
+	background-color:#fefefe;
+	color:#403d36;
+	border-radius:32px;
+	box-shadow:0 0 2.5em #a69e8d;
+}
+
+._-modal ._-modal--content{
+	overflow:auto;
+	position:absolute;
+	top:1.5%;
+	right:2%;
+	bottom:1.5%;
+	left:4%;
+	padding-right:3%;
+}
+
+._-modal h2{
+	margin:.25em 0;
+}
+
+._-modal p{
+	margin:.5em 0;
+}
+
+._-modal .questions{
+	display:block;
+	margin:.5em auto;
+	padding:0 0 0 .5em;
+}
+
+._-modal .questions li{
+	margin:.666em 0 1em 1.25em;
+}
+
+._-modal .questions p{
+	margin:0 0 .666em;
+	font-size:.9em;
+	color:#666157;
+}
+
+._-modal .questions .q{
+	margin:.333em 0 .125em;
+	line-height:1em;
+}
+
+._-modal .questions h4.q{
+	margin-top:1em;
+}
+
+._-modal .questions .final{
+	margin-left:0;
+	list-style: none;
+	text-align: center;
+}
+
+/* ~EN: tables { */
+
+._-table{
+	margin:0 auto;
+}
+
+._-table th,
+._-table td{
+}
+
+._-table th{
+}
+
+._-table td{
+}
+
+._-table td.status{
+}
+
+._-table td.status .small{
+}
+
+._-table th[colspan="2"]{
+}
+
+._-table input,
+._-admin #content--main input,
+._-table select,
+._-admin #content--main select,
+._-table textarea,
+._-admin #content--main textarea,
+._-table label,
+._-admin #content--main label{
+}
+
+._-table input,
+._-admin #content--main input,
+._-table select,
+._-admin #content--main select,
+._-table textarea,
+._-admin #content--main textarea{
+}
+
+._-table label,
+._-admin #content--main label{
+	cursor:pointer;
+}
+
+._-table input:hover,
+._-table input:focus,
+._-table select:hover,
+._-table selct:focus,
+._-table textarea:hover,
+._-table textarea:focus{
+}
+
+._-table ._-button{
+}
+
+._-table ._-button:hover,
+._-table ._-button:focus{
+}
+ 
+._-table ._-buttons{
+	clear:both;
+	overflow:hidden;
+	text-align: center !important;
+}
+
+._-table ._-button{
+	display:inline-block;
+	float:none;
+}
+
+/* } tables :EN~ */
+
+/* ~EN: forms { */
+
+._-form._-form--success{
+	margin: .5em 0;
+}
+
+._-form._-form--success h3{
+	margin: .25em 0;
+}
+
+._-form ._-error{
+	color: #842b71 !important;
+}
+
+._-form ._-form--header{
+	margin:.5em 0 0.25em;
+	font-size:1.25em;
+	color:#454545;
+}
+
+._-form ._-table th{
+	color:#666;
+	font-family: CENTURY-GOTHIC;
+	text-align: right;
+}
+
+._-form select,
+._-form textarea,
+._-form ._-input--text{
+	width:auto;
+	padding:3px .25em;
+	font-family:CENTURY-GOTHIC;
+	font-size:.9em;
+	border: solid 1px #aaa;
+	border-radius: 3px;
+	background: #f5f5f5;
+	color:#666;
+}
+
+._-form ._-input--text,
+._-form textarea{
+	width:16em;
+}
+
+._-form ._-input--text._-input--short{
+	width:6em;
+}
+
+._-form textarea{
+	min-height:6em;
+}
+
+._-form select:hover,
+._-form select:focus,
+._-form textarea:hover,
+._-form textarea:focus,
+._-form ._-input--text:hover,
+._-form ._-input--text:focus{
+	border-color:#666;
+	background-color:#fefefe;
+	box-shadow: 0 0 .25em #ccc;
+	color:#333;
+}
+
+._-form ._-button{
+	font-size: 1.5em;
+}
+
+._-form ._-tip{
+	margin: .25em 0 0;
+	padding: .5em 0 0;
+	font-family: CENTURY-GOTHIC;
+	font-size:.85em;
+	text-align: center;
+	color:#888;
+	border:double 4px #ccc;
+	border-width: 4px 0 0px;
+}
+
+._-form ._-tip + ._-form--error{
+	padding-bottom:.25em;
+	border-bottom:double 4px #e5d8e2;
+}
+
+._-form ._-tip._-error{
+	border-width:0 0 4px;
+	padding:.25em 0 .5em;
+}
+
+._-form ._-tip ._-text{
+
+}
+
+._-form ._-required{
+	color:#aaa;
+}
+
+/* } forms :EN~ */
