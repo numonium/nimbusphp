@@ -7,15 +7,15 @@
 
 ## Directory Structure 
 
-*/-* -> fake API requrests
+`/-` -> fake API requrests
 	/-/vacations.php -> “sfm.dev/-/vacations”
-*/_* -> “app” directory
-*/_/_.php* - bootstrap file
+`/_` -> “app” directory
+`/_/_.php` - bootstrap file
 	-- everything happens here
 
-/_/lib - library files
-/_/lib/inc - includes
-/_/lib/array.php - array files
+`/_/lib` - library files
+`/_/lib/inc` - includes
+`/_/lib/array.php` - array files
 
 // array collapsing
 $ary = array();
