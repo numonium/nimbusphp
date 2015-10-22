@@ -79,18 +79,23 @@ $element = array_pick($array, array(‘animals’,’cats’));
 ### Models
 
 `/_/lib/m` - models
-	`/_/lib/o/url.o.php` - url model and functions
-	`/_/lib/m/m.php` - basic model (also subclass of `_`)
+
+  * `/_/lib/o/url.o.php` - url model and functions
+
+  * `/_/lib/m/m.php` - basic model (also subclass of `_`)
+
+
+#### Load model data from database
 
 ```
-	// load model data from database
-	$model = new _Model(array(
-		FETCH_FROM_DB	=> true,
-		‘id’			=> 11
-	)); // will return new _Model with id 11 from table “models”
+$model = new _Model(array(
+	FETCH_FROM_DB	=> true,
+	‘id’			=> 11
+)); // will return new _Model with id 11 from table “models”
 ```
 
 `/_/lib/m/page.m.php` - page model
+
 `/_/lib/m/user.m.php` - user model
 
 ```
