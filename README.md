@@ -1,8 +1,11 @@
 # NIMBUS PHP Fake Documentation
 
 Remember - all classes start with _
+
 Models are subclasses of _Model
+
 Presenters are subclasses of _Presenter
+
 Views are static HTML
 
 ## Directory Structure 
