@@ -105,7 +105,8 @@ You *should* be able to specify any db field to query against (in this case, `em
 
 `/_/lib/m/vacations.m.php` - vacations model
   * URL: `//site.com/vactions`
-  * Load `_Vacation` from database
+
+#### Load `_Vacation` from database
 
 ```
 $vacation = new _Vacation(array(
@@ -118,7 +119,7 @@ $vacation = new _Vacation(array(
 
   * You can specify `id`, `uuid`, or `slug` to get records from DB - note `slug` may not be unique, so don’t rely on that; uuid is preferred
 
-### Admin Area
+#### Admin Widget Models
 
 `/_/lib/m/admin.m.php` - admin widget model
   * `$this->obj` -> current object
@@ -126,17 +127,24 @@ $vacation = new _Vacation(array(
   * URL: `//sfm.dev/admin/{model}/{action}/{args}`
   * URL: `//sfm.dev/admin/{model}/{action}?id={id}&stuff={stuff}`
 
-sometimes “add” method is not specified, because it does “edit” with no args
-	/_/lib/m/vacations.admin.m.php - vacations admin widget model
-	
-/_/lib/p - presenters
-/_/lib/v - views
+Sometimes `add` method is not specified, because it does `edit` with no args
+  * `/_/lib/m/vacations.admin.m.php` - vacations admin widget model
 
-Global $_ array
+### Presenters
 
-NOTE - every function must start with global $_; in order to reference our global var
+`/_/lib/p` - presenters
 
-Some references - most are defined in _/_.php :
+### Views
+
+`/_/lib/v` - views
+
+### Globals
+
+One of the most central pieces of this framework is the use of the superglobal array, `$_`. You *must* declare `global $_;` at the top of any function
+
+### Miscellany
+
+Some references - most are defined in `/_/_.php`:
 
 $_[‘.’] = full path of `_` directory (*not* doc root)
 $_[‘/’] = array of directories
