@@ -9,12 +9,12 @@
 ## Directory Structure 
 
 `/-` -> fake API requrests
-     * `/-/vacations.php` -> `http://site.com/-/vacations`
+  * `/-/vacations.php` -> `http://site.com/-/vacations`
 
 `/_` -> “app” directory
 
 `/_/_.php` - bootstrap file
-	* everything happens here
+  * everything happens here
 
 `/_/lib` - library files
 `/_/lib/inc` - includes
