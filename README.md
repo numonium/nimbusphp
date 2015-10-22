@@ -138,9 +138,9 @@ Sometimes `add` method is not specified, because it does `edit` with no args
 
 `/_/lib/v` - views
 
-### Globals
+### Globals (`$_`)
 
-One of the most central pieces of this framework is the use of the superglobal array, `$_`. You *must* declare `global $_;` at the top of any function
+One of the most central pieces of this framework is the use of the superglobal array, `$_`. You *must* declare `global $_;` at the top of any function to access `$_`
 
 ### Miscellany
 
