@@ -99,14 +99,14 @@ $model = new _Model(array(
 
 `/_/lib/m/user.m.php` - user model
 
-You *should* be able to specify any db field to query against (in this case, `email`), but you’ll only get the first result if there’s more than one. Try to stick to `id` or `uuid`
+  * You *should* be able to specify any db field to query against (in this case, `email`), but you’ll only get the first result if there’s more than one. Try to stick to `id` or `uuid`
 
 
 
 `/_/lib/m/vacations.m.php` - vacations model
   * URL: `//site.com/vactions`
 
-#### Load `_Vacation` from database
+##### Example - Load `_Vacation` from database
 
 ```
 $vacation = new _Vacation(array(
@@ -146,11 +146,11 @@ One of the most central pieces of this framework is the use of the superglobal a
 
 Some references - most are defined in `/_/_.php`:
 
-$_[‘.’] = full path of `_` directory (*not* doc root)
-$_[‘/’] = array of directories
-$_[‘db’] = DB object / controller
-	$_[‘db’]->get(‘users’); 	// select * from users
-	// more stuff  in _/o/db.o.php
-$_[‘user’] = $_[‘usr’] = current user
-$_[‘page’] = current page
+  * `$_[‘.’]` = full path of `_` directory (*not* doc root)
+  * `$_[‘/’]` = array of directories
+  * `$_[‘db’]` = DB object / controller
+  * `$_[‘db’]->get(‘users’);` = DB query -> `select * from users`
+    ** More stuff  in _/o/db.o.php
+  * `$_[‘user’]` = `$_[‘usr’]` = current user
+  * `$_[‘page’]` = current page
 
