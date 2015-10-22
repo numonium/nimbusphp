@@ -1,6 +1,7 @@
 # NIMBUS PHP Fake Documentation
 
-* Remember - all classes start with `_`
+* Remember - all classes start with `_` (our fake namespace)
+* Basic object "Nimbus" class is `_` (in `/_/lib/o/o.php`)
 * Models are subclasses of `_Model`
 * Presenters are subclasses of `_Presenter`
 * Views are static HTML, but typically have template segments (e.g., `$template['main']` or `$template['err']`)
