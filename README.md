@@ -19,7 +19,9 @@
 `/_/lib/inc` - includes
 `/_/lib/array.php` - array files
 
-## Array Collapsing
+## Array Operations
+
+### Array Collapsing
 ```
 $ary = array();
 $ary[‘user’][‘name’][‘first’] = ‘john’;
@@ -30,7 +32,7 @@ $ary = array_collapse($ary[‘user’]);
 // $ary[‘user’]['name-last’] = ‘chen’;
 ```
 
-## Array Expansion
+### Array Expansion
 ```
 $user = array();
 $user[‘name-first’] = ‘john’;
@@ -47,7 +49,7 @@ $user->name[‘first’] = ‘john’;
 $user->save();
 ```
 
-## Pick an element from multi-dimensional array
+### Pick an element from multi-dimensional array
 ```
 $array = array(
 	‘animals’	=> array(
@@ -60,34 +62,46 @@ $element = array_pick($array, array(‘animals’,’cats’));
 // basically equivalent to $element[‘animals’][‘cats’]
 ```
 
-## Miscellany
+## The System
+
+### Core
 
 `/_/inc/sys.php` - system stuff, low-level
 
+### Plain Objects
+
 `/_/lib/o` - objects
-	`/_/lib/o/o.php` - master class (class “_”) - everything is a subclass of this
+	`/_/lib/o/o.php` - master class (class `_`) - everything is a subclass of this
 	`/_/lib/o/router.o.php` - router
 	`/_/lib/o/api.o.php` - basic api class (new api for each project)
 	`/_/lib/o/sfm.api.o.php` - SFM project-specific functions
-`/_/lib/m - models
-	`/_/lib/o/url.o.php` - url model and functions
-	`/_/lib/m/m.php` - basic model (also subclass of “_”)
 
+### Models
+
+`/_/lib/m` - models
+	`/_/lib/o/url.o.php` - url model and functions
+	`/_/lib/m/m.php` - basic model (also subclass of `_`)
+
+	```
 		// load model data from database
 		$model = new _Model(array(
 			FETCH_FROM_DB	=> true,
 			‘id’			=> 11
 		)); // will return new _Model with id 11 from table “models”
+	```
 
-	/_/lib/m/page.m.php - page model
-	/_/lib/m/user.m.php - user model
+	`/_/lib/m/page.m.php` - page model
+	`/_/lib/m/user.m.php` - user model
+
+	```
 		// load user model data from database
 		$user = new _User(array(
 			FETCH_FROM_DB	=> true,
 			‘email’		=>‘eric@numonium.com’
 		));
+	```
 
-// you *should* be able to specify any db field to query against (in this case, ‘email’), but you’ll only get the first result if there’s more than one. try to stick to ‘id’ or ‘uuid’
+You *should* be able to specify any db field to query against (in this case, ‘email’), but you’ll only get the first result if there’s more than one. try to stick to ‘id’ or ‘uuid’
 
 	/_/lib/m/vacations.m.php - vacations model
 		url: //sfm.dev/vactions
@@ -119,7 +133,7 @@ NOTE - every function must start with global $_; in order to reference our globa
 
 Some references - most are defined in _/_.php :
 
-$_[‘.’] = full path of “_” directory (*not* doc root)
+$_[‘.’] = full path of `_` directory (*not* doc root)
 $_[‘/’] = array of directories
 $_[‘db’] = DB object / controller
 	$_[‘db’]->get(‘users’); 	// select * from users
