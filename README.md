@@ -28,7 +28,7 @@ $ary[‘user’][‘name’][‘last’] = ‘chen’;
 $ary = array_collapse($ary[‘user’]);
 // $ary[‘user’][‘name-first’] = ‘john’;
 // $ary[‘user’]['name-last’] = ‘chen’;
-``
+```
 
 ## Array Expansion
 ```
@@ -47,26 +47,31 @@ $user->name[‘first’] = ‘john’;
 $user->save();
 ```
 
-	// pick an element from multi-dimensional array
-	$array = array(
-		‘animals’	=> array(
-			‘cats’	=> array(),
-			‘dogs’	=> array()
-)
+## Pick an element from multi-dimensional array
+```
+$array = array(
+	‘animals’	=> array(
+		‘cats’	=> array(),
+		‘dogs’	=> array()
+	)
 );
+
 $element = array_pick($array, array(‘animals’,’cats’));
 // basically equivalent to $element[‘animals’][‘cats’]
+```
 
-/_/inc/sys.php - system stuff, low-level
+## Miscellany
 
-/_/lib/o - objects
-	/_/lib/o/o.php - master class (class “_”) - everything is a subclass of this
-	/_/lib/o/router.o.php - router
-	/_/lib/o/api.o.php - basic api class (new api for each project)
-	/_/lib/o/sfm.api.o.php - SFM project-specific functions
-/_/lib/m - models
-	/_/lib/o/url.o.php - url model and functions
-	/_/lib/m/m.php - basic model (also subclass of “_”)
+`/_/inc/sys.php` - system stuff, low-level
+
+`/_/lib/o` - objects
+	`/_/lib/o/o.php` - master class (class “_”) - everything is a subclass of this
+	`/_/lib/o/router.o.php` - router
+	`/_/lib/o/api.o.php` - basic api class (new api for each project)
+	`/_/lib/o/sfm.api.o.php` - SFM project-specific functions
+`/_/lib/m - models
+	`/_/lib/o/url.o.php` - url model and functions
+	`/_/lib/m/m.php` - basic model (also subclass of “_”)
 
 		// load model data from database
 		$model = new _Model(array(
