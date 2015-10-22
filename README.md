@@ -8,16 +8,19 @@
 ## Directory Structure 
 
 `/-` -> fake API requrests
-	/-/vacations.php -> “sfm.dev/-/vacations”
+     * `/-/vacations.php` -> `http://site.com/-/vacations`
+
 `/_` -> “app” directory
+
 `/_/_.php` - bootstrap file
-	-- everything happens here
+	* everything happens here
 
 `/_/lib` - library files
 `/_/lib/inc` - includes
 `/_/lib/array.php` - array files
 
-// array collapsing
+## Array Collapsing
+```
 $ary = array();
 $ary[‘user’][‘name’][‘first’] = ‘john’;
 $ary[‘user’][‘name’][‘last’] = ‘chen’;
@@ -25,8 +28,10 @@ $ary[‘user’][‘name’][‘last’] = ‘chen’;
 $ary = array_collapse($ary[‘user’]);
 // $ary[‘user’][‘name-first’] = ‘john’;
 // $ary[‘user’]['name-last’] = ‘chen’;
+``
 
-// array expansion
+## Array Expansion
+```
 $user = array();
 $user[‘name-first’] = ‘john’;
 $user['name-last’] = ‘chen’;
@@ -40,6 +45,7 @@ $user->save();
 
 $user->name[‘first’] = ‘john’;
 $user->save();
+```
 
 	// pick an element from multi-dimensional array
 	$array = array(
