@@ -71,16 +71,15 @@ $element = array_pick($array, array(‘animals’,’cats’));
 ### Plain Objects
 
 `/_/lib/o` - objects
-	`/_/lib/o/o.php` - master class (class `_`) - everything is a subclass of this
-	`/_/lib/o/router.o.php` - router
-	`/_/lib/o/api.o.php` - basic api class (new api for each project)
-	`/_/lib/o/sfm.api.o.php` - SFM project-specific functions
+
+  * `/_/lib/o/o.php` - master class (class `_`) - everything is a subclass of this
+  * `/_/lib/o/router.o.php` - router
+  * `/_/lib/o/api.o.php` - basic api class (new api for each project)
+  * `/_/lib/o/sfm.api.o.php` - SFM project-specific functions
 
 ### Models
 
-`/_/lib/m` - models
-
-  * `/_/lib/o/url.o.php` - url model and functions
+`/_/lib/m` - models  
 
   * `/_/lib/m/m.php` - basic model (also subclass of `_`)
 
@@ -91,20 +90,14 @@ $element = array_pick($array, array(‘animals’,’cats’));
 $model = new _Model(array(
 	FETCH_FROM_DB	=> true,
 	‘id’			=> 11
-)); // will return new _Model with id 11 from table “models”
+));
+
+// will return new _Model with id 11 from table “models”
 ```
 
 `/_/lib/m/page.m.php` - page model
 
 `/_/lib/m/user.m.php` - user model
-
-```
-	// load user model data from database
-	$user = new _User(array(
-		FETCH_FROM_DB	=> true,
-		‘email’		=>‘eric@numonium.com’
-	));
-```
 
 You *should* be able to specify any db field to query against (in this case, ‘email’), but you’ll only get the first result if there’s more than one. try to stick to ‘id’ or ‘uuid’
 
