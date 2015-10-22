@@ -101,16 +101,19 @@ $model = new _Model(array(
 
 You *should* be able to specify any db field to query against (in this case, ‘email’), but you’ll only get the first result if there’s more than one. try to stick to ‘id’ or ‘uuid’
 
-	/_/lib/m/vacations.m.php - vacations model
-		url: //sfm.dev/vactions
+`/_/lib/m/vacations.m.php` - vacations model
+  * url: //sfm.dev/vactions
+  * Load vacation from database
 
-		// load model data from database
-		$vacation = new _Vacation(array(
-			FETCH_FROM_DB	=> true,
-			‘uuid’		=>‘mXFKtXqDNc8hwDsR7JeyG8JfkaR7’
-		)); 
+```
+$vacation = new _Vacation(array(
+	FETCH_FROM_DB	=> true,
+	‘uuid’		=>‘mXFKtXqDNc8hwDsR7JeyG8JfkaR7’
+)); 
+
 // will return new _Vacation with data from given ‘uuid’ field in table ‘vacations’
-// you can specify ‘id’, ‘uuid’, or ‘slug’ to get records from DB - note ‘slug’ may not be unique, so don’t rely on that; uuid is preferred
+```
+     * You can specify `id`, `uuid`, or `slug` to get records from DB - note `slug` may not be unique, so don’t rely on that; uuid is preferred
 
 
 /_/lib/m/admin.m.php - admin widget model
