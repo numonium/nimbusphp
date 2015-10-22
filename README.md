@@ -99,7 +99,9 @@ $model = new _Model(array(
 
 `/_/lib/m/user.m.php` - user model
 
-You *should* be able to specify any db field to query against (in this case, ‘email’), but you’ll only get the first result if there’s more than one. try to stick to `id` or `uuid`
+You *should* be able to specify any db field to query against (in this case, `email`), but you’ll only get the first result if there’s more than one. Try to stick to `id` or `uuid`
+
+
 
 `/_/lib/m/vacations.m.php` - vacations model
   * URL: `//site.com/vactions`
@@ -116,12 +118,13 @@ $vacation = new _Vacation(array(
 
   * You can specify `id`, `uuid`, or `slug` to get records from DB - note `slug` may not be unique, so don’t rely on that; uuid is preferred
 
+### Admin Area
 
-/_/lib/m/admin.m.php - admin widget model
-	$this->obj = current object
-	functions correspond to $url->pieces[2] (‘add’,’edit’,’submit’)
-	url: //sfm.dev/admin/{model}/{action}/{args}
-	url: //sfm.dev/admin/{model}/{action}?id={id}&stuff={stuff}
+`/_/lib/m/admin.m.php` - admin widget model
+  * `$this->obj` -> current object
+  * Functions correspond to `$url->pieces[2]` (‘add’,’edit’,’submit’)
+  * URL: `//sfm.dev/admin/{model}/{action}/{args}`
+  * URL: `//sfm.dev/admin/{model}/{action}?id={id}&stuff={stuff}`
 
 sometimes “add” method is not specified, because it does “edit” with no args
 	/_/lib/m/vacations.admin.m.php - vacations admin widget model
