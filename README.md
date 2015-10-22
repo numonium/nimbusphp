@@ -146,11 +146,11 @@ One of the most central pieces of this framework is the use of the superglobal a
 
 Some references - most are defined in `/_/_.php`:
 
-  * `$_[‘.’]` = full path of `_` directory (*not* doc root)
-  * `$_[‘/’]` = array of directories
-  * `$_[‘db’]` = DB object / controller
-  * `$_[‘db’]->get(‘users’);` = DB query -> `select * from users`
-    ** More stuff  in _/o/db.o.php
-  * `$_[‘user’]` = `$_[‘usr’]` = current user
-  * `$_[‘page’]` = current page
-
+  * `$_['.']` = full path of `_` directory (*not* doc root)
+  * `$_['/']` = array of directories
+  * `$_['db']` = DB object / controller
+  * `$_['db']->get(‘users’);` = DB query -> `select * from users`
+    * More stuff  in `/_/o/db.o.php`
+  * `$_['user']` = `$_['usr']` = current user
+  * `$_['page']` = current page
+  * `$_['site']` = current site
