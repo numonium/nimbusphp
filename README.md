@@ -1,9 +1,9 @@
 # NIMBUS PHP Fake Documentation
 
-* Remember - all classes start with _
-* Models are subclasses of _Model
-* Presenters are subclasses of _Presenter
-* Views are static HTML
+* Remember - all classes start with `_`
+* Models are subclasses of `_Model`
+* Presenters are subclasses of `_Presenter`
+* Views are static HTML, but typically have template segments (e.g., `$template['main']` or `$template['err']`)
 
 ## Directory Structure 
 
